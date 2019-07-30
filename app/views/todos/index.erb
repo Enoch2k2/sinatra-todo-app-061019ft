@@ -1,0 +1,24 @@
+<h1>Todo List</h1>
+<table>
+  <thead>
+    <tr>
+        <th>Title</th>
+        <th>Completed</th>
+        <th>View</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @todos.each do |todo| %>
+      <tr>
+        <td><%= todo.title %></td>
+        <td><%= todo.completed ? 'Complete' : 'Not Complete' %></td>
+        <td><a href="/todos/<%= todo.id %>">View</a></td>
+        <td><a href="#">Edit</a></td>
+        <td><a href="#">Delete</a></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
