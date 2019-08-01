@@ -9,8 +9,9 @@ gem 'sqlite3', '~> 1.3.6'
 gem 'thin'
 gem 'shotgun'
 gem 'pry'
-gem 'bcrypt'
 gem 'tux'
+gem 'bcrypt' # bcrypt is added automatically with corneal
+gem 'rack-flash3' # add rack-flash3 for Rack::Flash
 
 group :test do
   gem 'rspec'

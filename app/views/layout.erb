@@ -28,11 +28,14 @@
           <div class="container">
             <a href="/" class="brand-logo">Todo App</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-              <li><a href="/todos/new">Create Todo</a></li>
-              <li><a href="/todos">Todo List</a></li>
-              <li><a href="#">Signup</a></li>
-              <li><a href="#">Login</a></li>
-              <li><a href="#">Signout</a></li>
+              <% if is_logged_in? %>
+                <li><a href="/todos/new">Create Todo</a></li>
+                <li><a href="/todos">Todo List</a></li>
+                <li><a href="/logout">Logout</a></li>
+              <% else %>
+                <li><a href="/signup">Signup</a></li>
+                <li><a href="/login">Login</a></li>
+              <% end %>
             </ul>
           </div>
         </div>
